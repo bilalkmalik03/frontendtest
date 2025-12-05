@@ -13,17 +13,19 @@ https://frontendtest-one-liard.vercel.app/
 - Tailwind CSS
 - Deployed on Vercel
 
-## Features
+## How to Run Locally
 
-- Responsive layout:
-  - Sidebar to the right of the board on desktop
-  - Sidebar below the board on mobile
-- Chessboard resizes while maintaining a perfect square aspect ratio
-- Clicking a square:
-  - Highlights the selected square
-  - Logs the square and click order in the sidebar
-- Click history displays:
-  - Order number
-  - Square name (e.g. e4)
-  - Timestamp
-  - Clearing all clicks
+1. Clone the repository:
+
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git  
+   cd YOUR_REPO_NAME
+
+2. Install dependencies:
+
+   npm install
+
+3. Start development server:
+
+   npm run dev
+
+   Visit: http://localhost:5173/
