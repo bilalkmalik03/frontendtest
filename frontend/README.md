@@ -16,8 +16,8 @@ https://frontendtest-one-liard.vercel.app/
 ## Features
 
 - Responsive layout:
-  - Sidebar to the **right** of the board on desktop
-  - Sidebar **below** the board on mobile
+  - Sidebar to the right of the board on desktop
+  - Sidebar below the board on mobile
 - Chessboard resizes while maintaining a perfect square aspect ratio
 - Clicking a square:
   - Highlights the selected square
@@ -26,3 +26,4 @@ https://frontendtest-one-liard.vercel.app/
   - Order number
   - Square name (e.g. e4)
   - Timestamp
+  - Clearing all clicks
