@@ -1,5 +1,14 @@
 <template>
-  <div class="bg-red-500 text-white p-10">
-    Hello Tailwind + Vue
-  </div>
+  <ChessBoard />
 </template>
+
+<script>
+import ChessBoard from './components/ChessBoard.vue'
+
+export default {
+  name: 'App',
+  components: {
+    ChessBoard
+  }
+}
+</script>
