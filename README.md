@@ -15,8 +15,8 @@ https://frontendtest-one-liard.vercel.app/
 
 1. Clone the repository:
 
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git  
-   cd YOUR_REPO_NAME
+   git clone (put link)
+   cd (repo name)
 
 2. Install dependencies:
 
