@@ -24,5 +24,5 @@ https://frontendtest-one-liard.vercel.app/
   - Logs the square and click order in the sidebar
 - Click history displays:
   - Order number
-  - Square name (e.g. `e4`)
+  - Square name (e.g. e4)
   - Timestamp
