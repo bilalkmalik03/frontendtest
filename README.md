@@ -1,7 +1,32 @@
 # Chess.com - Front End Programming Challenge
 
 Welcome to the [Chess.com](https://chess.com) front end programming challenge!
+## Live Demo
 
+https://frontendtest-one-liard.vercel.app/
+
+## Tech Stack
+
+- Vue 3 (Vite)
+- Tailwind CSS
+- Deployed on Vercel
+
+## How to Run Locally
+
+1. Clone the repository:
+
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git  
+   cd YOUR_REPO_NAME
+
+2. Install dependencies:
+
+   npm install
+
+3. Start development server:
+
+   npm run dev
+
+   Visit: http://localhost:5173/
 # Instructions
 1. Fork this repository.
 2. Create a VueJS application that satisfies the requirements detailed below.
