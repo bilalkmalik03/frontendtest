@@ -6,7 +6,7 @@
       </h1>
       
       <div class="flex flex-col lg:flex-row gap-6">
-        <!-- Chessboard Container -->
+        <!-- Chessboard: 8x8 grid of clickable squares -->
         <div class="flex-1 flex items-center justify-center">
           <div class="w-full max-w-2xl aspect-square">
             <div class="grid grid-cols-8 gap-0 w-full h-full border-4 border-amber-900 rounded-lg overflow-hidden shadow-2xl">
@@ -20,7 +20,7 @@
                   highlightedSquare === square ? 'ring-4 ring-yellow-400 ring-inset z-10' : ''
                 ]"
               >
-                <!-- File labels (bottom row) -->
+                <!-- File labels on bottom row -->
                 <span
                   v-if="isBottomRow(index)"
                   :class="[
@@ -31,7 +31,7 @@
                   {{ getFile(index) }}
                 </span>
                 
-                <!-- Rank labels (left column) -->
+                <!-- Rank labels on left column -->
                 <span
                   v-if="isLeftColumn(index)"
                   :class="[
@@ -42,7 +42,7 @@
                   {{ getRank(index) }}
                 </span>
                 
-                <!-- Highlight indicator -->
+                <!-- Yellow highlight overlay for selected square -->
                 <div
                   v-if="highlightedSquare === square"
                   class="absolute inset-0 bg-yellow-400 opacity-40"
@@ -52,9 +52,10 @@
           </div>
         </div>
 
-        <!-- Sidebar -->
+        <!-- Sidebar: Click history panel -->
         <div class="lg:w-80 w-full">
           <div class="bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden h-full max-h-[600px] flex flex-col">
+            <!-- Header with clear button -->
             <div class="bg-gradient-to-r from-amber-600 to-amber-700 p-4 flex justify-between items-center">
               <h2 class="text-xl font-bold text-white">Click History</h2>
               <button
@@ -65,6 +66,7 @@
               </button>
             </div>
             
+            <!-- Scrollable list of clicked squares -->
             <div class="p-4 flex-1 overflow-y-auto">
               <div v-if="clickedSquares.length === 0" class="text-center text-slate-400 py-8">
                 <p class="text-sm">Click on squares to track them</p>
@@ -93,6 +95,7 @@
               </div>
             </div>
             
+            <!-- Footer showing total clicks -->
             <div class="bg-slate-900 p-3 border-t border-slate-700">
               <div class="text-sm text-slate-300 text-center">
                 Total clicks: <span class="font-bold text-amber-400">{{ clickedSquares.length }}</span>
@@ -110,13 +113,14 @@ export default {
   name: 'ChessBoard',
   data() {
     return {
-      clickedSquares: [],
-      highlightedSquare: null,
-      files: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'],
-      ranks: ['8', '7', '6', '5', '4', '3', '2', '1']
+      clickedSquares: [], // Stores click history with square, timestamp, and order
+      highlightedSquare: null, // Currently selected square
+      files: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], // Column labels
+      ranks: ['8', '7', '6', '5', '4', '3', '2', '1'] // Row labels
     }
   },
   computed: {
+    // Generates all 64 squares in chess notation 
     allSquares() {
       const squares = []
       this.ranks.forEach(rank => {
@@ -128,6 +132,7 @@ export default {
     }
   },
   methods: {
+    // Records a click with square name, timestamp, and order number
     handleSquareClick(square) {
       this.highlightedSquare = square
       this.clickedSquares.push({
@@ -136,15 +141,18 @@ export default {
         order: this.clickedSquares.length + 1
       })
     },
+    // Clears all click history and highlighting
     clearHistory() {
       this.clickedSquares = []
       this.highlightedSquare = null
     },
+    // Returns true if square should be light colored 
     isLightSquare(index) {
       const row = Math.floor(index / 8)
       const col = index % 8
       return (row + col) % 2 === 0
     },
+    // helper to check square position and get coordinates
     isBottomRow(index) {
       return Math.floor(index / 8) === 7
     },
