@@ -1,4 +1,29 @@
 # Chess.com - Front End Programming Challenge
+## Steps to Run Locally
+
+1. Download and unzip the project files.
+2. Open a terminal in the project root directory.
+3. Install dependencies.
+4. Start the development server.
+5. Open the app in your browser.
+
+### Commands
+
+npm install  
+npm run dev  
+
+
+find on: http://localhost:5173
+
+
+## Live Demo
+
+https://frontendtest-one-liard.vercel.app/
+
+
+## Project ZIP
+
+https://drive.google.com/file/d/1citPFWUHoWW0iGny3iUo2GLcpqzfrmyl/view?usp=sharing
 
 Welcome to the [Chess.com](https://chess.com) front end programming challenge!
 
